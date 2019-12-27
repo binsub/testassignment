@@ -11,7 +11,5 @@ basicauth = BasicAuth(app)
 def handle_marshmallow_validation(err):
     return jsonify(err.messages), 400
 
-
-
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=8080)

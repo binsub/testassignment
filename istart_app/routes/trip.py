@@ -44,7 +44,6 @@ class Trip(MethodView):
             return '', 204
 
         return jsonify(message=ITEM_NOT_FOUND), 404
-        return '', 204
 
     def put(self, trip_code):
         trip = TripModel.find_by_trip_code(trip_code)
